@@ -1,0 +1,29 @@
+:root {
+  --white: white;
+  --red-400: #FA5454;
+  --red-600: #ff0000;
+  --black-text: #090909;
+  --gray-200:  #BEBEBE;
+  --gray-400:#A9A5A5;
+  --gray-600: #464444;
+  --yellow-600: #FAFF00;
+
+
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:  'Inter', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -36,7 +36,7 @@ export default function NavBar() {
       <div className={styles.contactAndCart}>
 
       <div className={styles.callButton}>
-          <Image src={call} />
+          <Image src={call} style={{color: ''}} />
             <div className={styles.text}>
               +1-650-546-9864
             </div>
