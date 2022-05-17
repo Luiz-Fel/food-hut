@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Freatured from '../components/Freatured'
 import Hero from '../components/Hero'
 import Menu from '../components/Menu'
+import Social from '../components/Social'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
         <Hero />
         <Menu />
         <Freatured />
+        <Social />
     </div>
   )
 }

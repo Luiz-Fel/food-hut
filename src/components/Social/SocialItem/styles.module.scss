@@ -1,0 +1,50 @@
+.container {
+    max-width: 420px;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.profileHeader {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.postInfo {
+}
+.userInfo {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+.text {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-top: 0;
+    font-size: 0.95rem;
+}
+.profileName {
+    font-weight: bold;
+}
+.username {
+    color: var(--gray-400)
+}
+
+
+.buttons {
+    display: flex;
+    gap: 4rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border-top: 1px solid var(--gray-200);
+    font-size: 0.8rem;
+    color: var(--gray-600);
+}
+.icon {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
