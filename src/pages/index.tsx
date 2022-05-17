@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Freatured from '../components/Freatured'
 import Hero from '../components/Hero'
 import Menu from '../components/Menu'
 import styles from '../styles/Home.module.scss'
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
 
         <Hero />
         <Menu />
+        <Freatured />
     </div>
   )
 }

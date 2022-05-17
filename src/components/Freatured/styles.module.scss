@@ -1,0 +1,93 @@
+.container {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    background-color: var(--background);
+    display: flex;
+}
+
+.burger {
+    display: flex;
+    width: 100%;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-top: 8.8rem;
+}
+
+.burgerDescription {
+    margin-top: 4rem;
+    h3 {
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    a {
+        border: 1px solid white;
+        background-color: white;
+    }
+}
+
+.burgerImage1 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 330px;
+    top: 2265px;
+}
+
+.burgerImage2 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 2275px;
+    left: 850px;
+    z-index: 2;
+}
+
+.burgerImage3 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 1340px;
+    top: 2260px;
+    z-index: 3;
+}
+
+
+.burger1 {
+    background-color: var(--red-400);
+}
+
+.burger2 {
+    background-color: var(--yellow-600);
+    z-index: 2;
+}
+
+.burger3 {
+    background-color: var(--orange-400);
+    z-index: 3;
+}
+
+.burger1::before {
+    content: '';
+    position: absolute;
+    top: 2254px; left: 00px;
+    border-top: 40px solid transparent;
+    border-left: 508px solid var(--red-400);
+    width: 40px;
+}
+.burger2::before {
+    content: '';
+    position: absolute;
+    top: 2254px; left: 506px;
+    border-top: 40px solid transparent;
+    border-left: 508px solid var(--yellow-600);
+    width: 40px;
+}
+.burger3::before {
+    content: '';
+    position: absolute;
+    top: 2254px; left: 1013px;
+    border-top: 40px solid transparent;
+    border-left: 508px solid var(--orange-400);
+    width: 40px;
+}
