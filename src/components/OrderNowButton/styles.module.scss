@@ -7,3 +7,12 @@
     color: var(--white);
     border-radius: 20px;
 }
+.orderNowButtonLight {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: var(--red-600);
+    border-radius: 20px;
+    border: 1px solid var(--red-600);
+}
