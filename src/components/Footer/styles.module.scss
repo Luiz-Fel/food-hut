@@ -1,0 +1,36 @@
+.container {
+    background-color: #222222b9;
+    display: flex;
+    gap: 3rem;
+}
+
+.content {
+    padding-top: 4rem;
+    display: flex;
+    color: white;
+    gap: 5rem;
+}
+
+.column {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    p {
+        line-height: 1.4;
+    }
+}
+
+.slogan {
+    font-size: 1.75rem;
+}
+
+.columnTitle {
+    color: var(--red-400);
+    font-size: 1.25rem;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
