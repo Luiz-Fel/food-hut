@@ -15,9 +15,10 @@ export default function Social() {
                 For the latest news, updates and inspirational recipes, 
                 follow us on Instagram to flavour up your food!
             </p>
-            <div className={styles.socialItems}>
+        </div>
+        <div className={styles.socialItems}>
             <Swiper
-            spaceBetween={250}
+            spaceBetween={100}
             slidesPerView={3}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
@@ -78,9 +79,11 @@ export default function Social() {
                     >
                 </SwiperSlide>
                 
-    </Swiper>
-            </div>
+            </Swiper>
         </div>
+        <h2 className={styles.sideText}>
+          Social
+        </h2>
     </div>
   )
 }
