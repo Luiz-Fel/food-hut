@@ -38,3 +38,34 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.react-modal {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 2rem;
+  position: absolute;
+  border-radius: 20px;
+  border: 1px solid black;
+
+  top: 6.2rem;
+  bottom: 8rem;
+  right: 0;
+  left: 70%;
+}
+.overlay-react-modal {
+  background: transparent;
+  position: absolute;
+
+  top: 0;
+  bottom:0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
