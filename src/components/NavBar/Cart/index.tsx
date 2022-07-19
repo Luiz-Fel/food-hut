@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import React, { Dispatch } from 'react'
 import ReactModal from 'react-modal';
+import CartProduct from './CartProduct';
 import styles from './styles.module.scss'
 
 interface CartProps {
@@ -28,9 +28,7 @@ const price = new Intl.NumberFormat('en-US', {
     currency: 'USD'  
   }).format(products[0].price[0])
   
-const loader = ({ src  } : any) => {
-  return `/images/${src}`
-}
+
 
 export default function Cart({ modalIsOpen, setModalIsOpen } : CartProps) {
   return (
@@ -41,22 +39,13 @@ export default function Cart({ modalIsOpen, setModalIsOpen } : CartProps) {
       className="react-modal"
     >
 
-      <button onClick={() => setModalIsOpen(false)}>
+      <button className={styles.button} onClick={() => setModalIsOpen(false)}>
         CLOSE
       </button>
       <div className={styles.container}>
         {products.map((product) => {
           return (
-            <div className={styles.product}>
-              <Image loader={loader} src={product.img} width={70} height={70}/>
-              <div className={styles.content}>
-                <p>{product.name}</p>
-                <div className={styles.lowerContent}>
-                  <p>{quantity}</p>
-                  <p>{price}</p>
-                </div>
-              </div>
-            </div>
+            <CartProduct  product={product} quantity={quantity} price={price} />
           )
         })}
       </div>
