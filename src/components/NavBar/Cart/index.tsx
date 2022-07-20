@@ -42,14 +42,14 @@ export default function Cart({ modalIsOpen, setModalIsOpen } : CartProps) {
       <button className={styles.button} onClick={() => setModalIsOpen(false)}>
         CLOSE
       </button>
-      <div className={styles.container}>
+      <div className={styles.productsContainer}>
         {products.map((product) => {
           return (
-            <CartProduct  product={product} quantity={quantity} price={price} />
+            <CartProduct product={product} quantity={quantity} price={price} />
           )
         })}
       </div>
-      <h3 className={styles.total}>{totalValue}</h3>
+      <h3 className={styles.total}>{`Total: ${totalValue}`}</h3>
     </ReactModal>
   )
 }

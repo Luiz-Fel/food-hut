@@ -26,3 +26,28 @@
 
 
 }
+
+.button {
+    margin-left: auto;
+    display: block;
+    font-size:0.75rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: white;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.productsContainer { 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.total {
+    display: relative;
+    font-size: 1.5rem;
+    margin-top: 14.5rem;
+    margin-left:16.5rem;
+}
