@@ -15,7 +15,6 @@ const Home: NextPage = () => {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <meta name="description" content="The best burger shop in the town" />
         <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
       </Head>
 
         <Hero />
