@@ -5,11 +5,18 @@ import styles from './styles.module.scss'
 
 interface CartProps {
   modalIsOpen: boolean;
-  setModalIsOpen: Dispatch<React.SetStateAction<boolean>>;
+  closeCartModal: () => void;
 }
 
 const products = [{
   id: 0,
+  img: 'singlePatty.png',
+  name: 'Single Patty',
+  price: [7.99, 9.99, 11.99],
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra malesuada eros quis bibendum. Sed sodales a eros vestibulum tincidunt. Integer urna neque, sodales ac varius sit amet, luctus et leo. Donec convallis turpis sed hendrerit euismod. Donec egestas dapibus consequat.'
+},
+{
+  id: 1,
   img: 'singlePatty.png',
   name: 'Single Patty',
   price: [7.99, 9.99, 11.99],
@@ -29,23 +36,23 @@ const price = new Intl.NumberFormat('en-US', {
   }).format(products[0].price[0])
   
 
-
-export default function Cart({ modalIsOpen, setModalIsOpen } : CartProps) {
+export default function Cart({ modalIsOpen, closeCartModal } : CartProps) {
   return (
     <ReactModal
-      isOpen={modalIsOpen}
-      onRequestClose={() => setModalIsOpen(false)}
       overlayClassName="overlay-react-modal"
-      className="react-modal"
+      className={styles.reactModal}
+      isOpen={modalIsOpen}
+      onRequestClose={closeCartModal}
+      closeTimeoutMS={200}
     >
 
-      <button className={styles.button} onClick={() => setModalIsOpen(false)}>
+      <button className={styles.button} onClick={closeCartModal}>
         CLOSE
       </button>
       <div className={styles.productsContainer}>
         {products.map((product) => {
           return (
-            <CartProduct product={product} quantity={quantity} price={price} />
+            <CartProduct key={product.id} product={product} quantity={quantity} price={price} />
           )
         })}
       </div>
