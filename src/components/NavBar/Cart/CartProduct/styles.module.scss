@@ -1,13 +1,39 @@
-.product {
+.upperContent {
     display: flex;
-    gap: 3rem;
     align-items: center;
+    gap: 1.5rem;
+    font-size:1.1rem;
 }
-.content {
+.price {
+    margin-left: auto;
     font-size: 1.25rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .lowerContent {
     display: flex;
     gap: 1rem;
+}
+
+.editButton {
+    background-color: transparent;
+    border: transparent;
+    font-size: 1rem;
+    color: red;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.removeButton {
+    background-color: transparent;
+    border: transparent;
+    font-size: 1rem;
+    color: gray;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
