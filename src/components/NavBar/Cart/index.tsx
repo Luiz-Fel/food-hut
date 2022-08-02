@@ -2,6 +2,7 @@ import React, { Dispatch } from 'react'
 import ReactModal from 'react-modal';
 import CartProduct from './CartProduct';
 import styles from './styles.module.scss'
+import { CSSTransition } from 'react-transition-group';
 
 interface CartProps {
   modalIsOpen: boolean;
@@ -37,26 +38,36 @@ const price = new Intl.NumberFormat('en-US', {
   
 
 export default function Cart({ modalIsOpen, closeCartModal } : CartProps) {
-  return (
-    <ReactModal
-      overlayClassName="overlay-react-modal"
-      className={styles.reactModal}
-      isOpen={modalIsOpen}
-      onRequestClose={closeCartModal}
-      closeTimeoutMS={200}
-    >
 
-      <button className={styles.button} onClick={closeCartModal}>
-        CLOSE
-      </button>
-      <div className={styles.productsContainer}>
-        {products.map((product) => {
-          return (
-            <CartProduct key={product.id} product={product} quantity={quantity} price={price} />
-          )
-        })}
-      </div>
-      <h3 className={styles.total}>{`Total: ${totalValue}`}</h3>
-    </ReactModal>
+  const modalTransitionStyles = modalIsOpen ? styles.openedModal : styles.closedModal
+
+  return (
+
+      <ReactModal
+        overlayClassName={{
+          base: styles.overlay,
+          afterOpen: styles.overlayAfterOpen,
+          beforeClose: styles.overlayBeforeClose
+        }}
+        className={`${styles.reactModal} ${modalTransitionStyles}`}
+        isOpen={modalIsOpen}
+        onRequestClose={closeCartModal}
+        closeTimeoutMS={200}
+        >
+
+        <button className={styles.button} onClick={closeCartModal}>
+          CLOSE
+        </button>
+        <div className={styles.productsContainer}>
+          {products.map((product) => {
+            return (
+              <CartProduct key={product.id} product={product} extras={quantity} price={price} />
+            );
+          })}
+        </div>
+        <h3 className={styles.total}>{`Total: ${totalValue}`}</h3>
+      </ReactModal>
   )
 }
+
+

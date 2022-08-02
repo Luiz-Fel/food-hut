@@ -31,11 +31,16 @@
 }
 
 .cart {
+    border: transparent;
+    background-color: transparent;
+}
+.cartImage {
     padding: 0.6rem;
     padding-top: 0.4rem;
+    margin-left: 2rem;
     background-color: black;
     border-radius: 24px 12px 47px 10px;
-    margin-left: 2rem;
+   
 }
 .contactAndCart {
     display: flex;

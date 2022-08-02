@@ -1,15 +1,13 @@
-.react-modal {
-    width: 100%;
-    max-width: 576px;
-    background: var(--background);
-    padding: 3rem;
-    position: absolute;
-    border-radius: 0.25rem;
-
-    top: 100px;
-    bottom:0;
+.reactModal {
+    max-width: 31.25rem;
+    background: white;
+    padding: 2rem;
+    position: fixed;
+    border: 1px solid gray;
+    height: 100%;
     right: 0;
-    left: 0;
+    z-index: 3;
+    transition: all 0.3s;
 }
 .overlay-react-modal {
     background: rgba(0, 0, 0, 0.5);
@@ -51,3 +49,34 @@
     margin-top: 14.5rem;
     margin-left:16.5rem;
 }
+
+.openedModal {
+    width: 100%;
+}
+
+.closedModal {
+    width: 0;
+}
+
+.overlay{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: -200px;
+
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.overlayAfterOpen {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  
+  .overlayBeforeClose {
+    opacity: 0;
+    transform: translateX(100px);
+  }
