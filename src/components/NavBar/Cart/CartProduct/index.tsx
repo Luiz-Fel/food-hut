@@ -7,7 +7,7 @@ interface CartProductProps {
     img: string;
     name: string;
   };
-  extras: {
+  toppings: {
     quantity: number;
     description: string;
   }[];
@@ -17,7 +17,7 @@ const loader = ({ src } : any) => {
   return `/images/${src}`
 }
 
-export default function CartProduct({ product, extras, price } : CartProductProps) {
+export default function CartProduct({ product, toppings, price } : CartProductProps) {
   return (
   <div className={styles.product}>
       <div className={styles.upperContent}>
@@ -28,7 +28,7 @@ export default function CartProduct({ product, extras, price } : CartProductProp
       </div>
     </div>
       <div className={styles.lowerContent}>
-        {extras.map(({quantity, description}) => {
+        {toppings.map(({quantity, description}) => {
           return(
             <p className={styles.topping}>
               {`${quantity}x ${description}`}
@@ -44,6 +44,7 @@ export default function CartProduct({ product, extras, price } : CartProductProp
         Remove
       </button>
     </div>
+    <p>{}</p>
   </div>
   
   )

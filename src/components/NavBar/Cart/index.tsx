@@ -29,10 +29,19 @@ const totalValue = new Intl.NumberFormat('en-US', {
     currency: 'USD'  
   }).format(7.99);
 
-const quantity = [{
+const toppings = [{
   quantity: 1,
   description: 'An additional patty'
-}];
+},{
+  quantity: 1,
+  description: 'An additional patty'
+},{
+  quantity: 1,
+  description: 'An additional patty'
+},{
+  quantity: 1,
+  description: 'An additional patty'
+},];
 
 const price = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -64,7 +73,7 @@ export default function Cart({ modalIsOpen, closeCartModal } : CartProps) {
         <div className={styles.productsContainer}>
           {products.map((product) => {
             return (
-              <CartProduct key={product.id} product={product} extras={quantity} price={price} />
+              <CartProduct key={product.id} product={product} toppings={toppings} price={price} />
             );
           })}
         </div>

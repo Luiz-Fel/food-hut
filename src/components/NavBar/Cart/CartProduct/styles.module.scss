@@ -12,8 +12,15 @@
 }
 
 .lowerContent {
-    display: flex;
-    gap: 1rem;
+    display: block;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    padding-left: 0.5rem;
+}
+
+.topping {
+    margin-top: 0.1rem;
+    color: var(--gray-500);
 }
 
 .editButton {
