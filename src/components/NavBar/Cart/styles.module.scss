@@ -1,29 +1,4 @@
-.reactModal {
-    max-width: 31.25rem;
-    background: white;
-    padding: 2rem;
-    position: fixed;
-    border: 1px solid gray;
-    height: 100%;
-    right: 0;
-    z-index: 3;
-    transition: all 0.3s;
-}
-.overlay-react-modal {
-    background: rgba(0, 0, 0, 0.5);
-    position: fixed;
 
-    top: 0;
-    bottom:0;
-    right: 0;
-    left: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-}
 
 .button {
     margin-left: auto;
@@ -50,12 +25,42 @@
     margin-left:16.5rem;
 }
 
+.reactModal {
+    max-width: 30rem;
+    background: white;
+    padding: 2rem;
+    position: fixed;
+    border: 1px solid gray;
+    height: 100%;
+    right: 0;
+    z-index: 3;
+    transition: all 0.5s;
+}
+
 .openedModal {
     width: 100%;
 }
 
 .closedModal {
     width: 0;
+}
+
+
+
+.overlay-react-modal {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
 }
 
 .overlay{

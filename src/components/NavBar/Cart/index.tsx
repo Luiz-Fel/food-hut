@@ -29,7 +29,10 @@ const totalValue = new Intl.NumberFormat('en-US', {
     currency: 'USD'  
   }).format(7.99);
 
-const quantity = 1;
+const quantity = [{
+  quantity: 1,
+  description: 'An additional patty'
+}];
 
 const price = new Intl.NumberFormat('en-US', {
     style: 'currency',
