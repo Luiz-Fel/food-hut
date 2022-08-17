@@ -18,6 +18,22 @@
     padding-left: 0.5rem;
 }
 
+.quantity {
+    background-color: red;
+    color: white;
+    position: relative;
+    font-size: 0.8rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: 4.2rem;
+    left: 3rem;
+    z-index: 2;
+}
+
 .topping {
     margin-top: 0.1rem;
     color: var(--gray-500);

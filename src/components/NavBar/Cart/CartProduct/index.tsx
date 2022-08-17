@@ -18,8 +18,13 @@ const loader = ({ src } : any) => {
 }
 
 export default function CartProduct({ product, toppings, price } : CartProductProps) {
+
+
+  const [quantity, setQuantity] = React.useState(1);
+
   return (
   <div className={styles.product}>
+      <p className={styles.quantity}>{quantity}</p>
       <div className={styles.upperContent}>
         <Image loader={loader} src={product.img} width={70} height={70}/>
         <p>{product.name}</p>
@@ -44,7 +49,6 @@ export default function CartProduct({ product, toppings, price } : CartProductPr
         Remove
       </button>
     </div>
-    <p>{}</p>
   </div>
   
   )
